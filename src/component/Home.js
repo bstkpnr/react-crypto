@@ -13,7 +13,7 @@ function Home({ search, coinName }) {
         <h1 className="text-center text-dark">CRYTPO</h1>
       </div>
       <div className="row">
-        <InputGroup className="mb-3">
+        <InputGroup className="mb-3 m-1 p-3" style={{borderRadius:"10px",width:"18rem"}}>
           <InputGroup.Prepend>
             <InputGroup.Text id="inputGroup-sizing-default">
               <FaSearchDollar />
@@ -39,9 +39,9 @@ function Home({ search, coinName }) {
             return false;
           })
           .map((val) => (
-            <Card style={{width:"19rem",margin:"20px"}} className="card border-danger mb-3">
+            <Card style={{width:"19rem",margin:"20px"}} className="card border-danger  bg-light mb-3">
               <Card.Img variant="top" src={val.image} />
-              <Card.Body style={{backgroundColor:'#BBBBBB'}}>
+              <Card.Body style={{backgroundColor:'#DDDDDD'}}>
                 <Card.Text>Name:{val.name}</Card.Text>
                 <Card.Text>Rank : {val.market_cap_rank}</Card.Text>
                 <Card.Text>Total : {val.total_volume}</Card.Text>
@@ -56,10 +56,7 @@ function Home({ search, coinName }) {
               </Card.Body>
             </Card>
           ))}
-        
-        //{" "}
       </div>
-      //{" "}
     </div>
     // </div>
   );

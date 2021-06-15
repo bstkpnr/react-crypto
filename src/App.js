@@ -7,7 +7,7 @@ import { useState } from "react";
 
 function App() {
   const [search, setSearch] = useState("");
-  const getCryptoName = (e) => {
+  const cryptoName = (e) => {
     setSearch(e.target.value);
   };
 
@@ -17,7 +17,7 @@ function App() {
         <BrowserRouter>
           <Switch>
             <Route path="/" exact>
-              <Home search={search} getCryptoName={getCryptoName} />
+              <Home search={search} coinName={cryptoName} />
             </Route>
             <Route path="/:id" component={Coin} />
           </Switch>
